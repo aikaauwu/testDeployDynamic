@@ -4,8 +4,7 @@
   <artifactId>afrinapart</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
-  <dependencies>
+ <dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -18,7 +17,7 @@
 		<dependency>
 		    <groupId>org.postgresql</groupId>
 		    <artifactId>postgresql</artifactId>
-		    <version>42.5.1</version>
+		    <version>42.2.5</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
@@ -27,29 +26,11 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-	  
-	  <dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-compiler-plugin</artifactId>
-  <version>3.10.1</version>
-  <type>maven-plugin</type>
-</dependency>
-	  
 	</dependencies>
-	
-	
-  <build>
-  
-    <plugins>
-    
-   <plugin>
-        <groupId>com.heroku.sdk</groupId>
-        <artifactId>heroku-maven-plugin</artifactId>
-        
-        <version>3.0.7</version>
-      </plugin>
-    
-   			 <plugin>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -88,18 +69,6 @@
           			</execution>
         		</executions>
       		</plugin>
-    
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.1</version>
-        <configuration>
-          <release>17</release>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.2.3</version>
-      </plugin>
-    </plugins>
-  </build>
+		</plugins>
+  	</build>
 </project>
